@@ -16,7 +16,6 @@ import {
   Sparkles,
   Layers,
   ArrowUpRight,
-  Upload,
   Check,
   Copy,
   X,
@@ -92,44 +91,38 @@ const SERVICES = [
 const PROJECTS = [
   {
     number: '01',
-    name: 'Nextlevel Studio Platform',
-    category: 'Client Solutions',
-    liveUrl: '#contact',
-    tags: ['Next.js', 'PostgreSQL', 'Tailwind CSS', 'Framer Motion'],
+    name: 'Kleenit Ghana',
+    category: 'Client Website',
+    liveUrl: 'https://www.kleenitgh.com/',
+    tags: ['Web Design', 'HTML/CSS', 'Responsive', 'SEO'],
     images: {
-      col1Top:
-        'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055344_5eff02e0-87a5-41ce-b64f-eb08da8f33db.png&w=1280&q=85',
-      col1Bottom:
-        'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055431_11d841fd-8b41-46a5-82e4-b04f2407a7d8.png&w=1280&q=85',
-      col2: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055451_e317bf2d-28d4-48cc-86b0-6f72f25b6327.png&w=1280&q=85',
+      col1Top: '/kleenit-hero.png',
+      col1Bottom: '/kleenit-services.png',
+      col2: '/kleenit-bottom.png',
     },
   },
   {
     number: '02',
-    name: 'Aura Interactive System',
-    category: 'Personal Engineering',
-    liveUrl: '#contact',
-    tags: ['React', 'TypeScript', 'Node.js', 'WebSockets'],
+    name: 'Oliver Car Rentals',
+    category: 'Client Website',
+    liveUrl: 'https://www.olivercarrentals.com/',
+    tags: ['Web Design', 'Booking System', 'Responsive', 'SEO'],
     images: {
-      col1Top:
-        'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055654_911201c5-36d9-4bc6-bac7-331adfce159f.png&w=1280&q=85',
-      col1Bottom:
-        'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055723_5ceda0b8-d9c2-4665-b2e3-83ba19ba76d1.png&w=1280&q=85',
-      col2: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055753_adc5dcbd-a8e6-49c0-b43a-9b030d835cea.png&w=1280&q=85',
+      col1Top: '/oliver-hero.png',
+      col1Bottom: '/oliver-fleet.png',
+      col2: '/oliver-bottom.png',
     },
   },
   {
     number: '03',
-    name: 'Solaris Cloud Hub',
-    category: 'Full-Stack Architecture',
-    liveUrl: '#contact',
-    tags: ['Cloudflare', 'Redis', 'Docker', 'GraphQL'],
+    name: "Beebie's Green Pepper Chinese",
+    category: 'Client Website',
+    liveUrl: 'https://www.beebiesgreenpepperchinese.com/',
+    tags: ['Web Design', 'Menu System', 'Online Ordering', 'SEO'],
     images: {
-      col1Top:
-        'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055759_963cfb0b-4bd1-4b0f-9d0a-09bd6cf95b2f.png&w=1280&q=85',
-      col1Bottom:
-        'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_060108_438f781a-9846-4dcc-89ab-c4e6cb830f5b.png&w=1280&q=85',
-      col2: 'https://images.higgs.ai/?default=1&output=webp&url=https%3A%2F%2Fd8j0ntlcm91z4.cloudfront.net%2Fuser_38xzZboKViGWJOttwIXH07lWA1P%2Fhf_20260412_055818_9d062121-ad7e-46b9-999a-1a6a692ef1ee.png&w=1280&q=85',
+      col1Top: '/beebies-hero.png',
+      col1Bottom: '/beebies-menu.png',
+      col2: '/beebies-bottom.png',
     },
   },
 ];
@@ -184,6 +177,19 @@ const GlobalStyles: React.FC = () => {
       }
       ::-webkit-scrollbar-thumb:hover {
         background: #3B3F4A;
+      }
+
+      @keyframes marquee-scroll {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .marquee-track {
+        display: flex;
+        width: max-content;
+        animation: marquee-scroll 18s linear infinite;
+      }
+      .marquee-track:hover {
+        animation-play-state: paused;
       }
     `}</style>
   );
@@ -375,6 +381,8 @@ const LiveProjectButton: React.FC<{ href?: string; label?: string }> = ({
   return (
     <a
       href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       className="inline-flex items-center gap-2 rounded-full border-2 border-[#D7E2EA] text-[#D7E2EA] font-medium uppercase tracking-widest px-6 py-2.5 sm:px-8 sm:py-3 text-xs sm:text-sm md:text-base transition-colors duration-200 hover:bg-[#D7E2EA]/10 select-none cursor-pointer"
     >
       <span>{label}</span>
@@ -386,29 +394,13 @@ const LiveProjectButton: React.FC<{ href?: string; label?: string }> = ({
 interface HeroSectionProps {
   onOpenContact: () => void;
   avatarUrl: string;
-  onAvatarChange: (newUrl: string) => void;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
   onOpenContact,
   avatarUrl,
-  onAvatarChange,
 }) => {
-  const fileInputRef = useRef<HTMLInputElement>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        if (event.target?.result) {
-          onAvatarChange(event.target.result as string);
-        }
-      };
-      reader.readAsDataURL(file);
-    }
-  };
 
   const scrollTo = (id: string) => {
     const target = document.getElementById(id);
@@ -507,6 +499,28 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             Hi, i&apos;m ernest
           </h1>
         </FadeIn>
+
+        {/* Name Marquee Ticker */}
+        <FadeIn delay={0.3} y={0}>
+          <div className="w-full overflow-hidden border-y border-[#B600A8]/30 bg-[#B600A8]/5 py-2 mt-1">
+            <div className="marquee-track">
+              {[...Array(8)].map((_, i) => (
+                <span
+                  key={i}
+                  className="flex items-center gap-6 px-6 whitespace-nowrap font-black uppercase tracking-widest text-[#B600A8]"
+                  style={{ fontSize: 'clamp(0.85rem, 1.6vw, 1.4rem)' }}
+                >
+                  Ernest Ofoe
+                  <span className="text-[#D7E2EA]/40 font-light">•</span>
+                  <span className="text-[#D7E2EA]/70 font-medium tracking-wider">Full Stack Developer</span>
+                  <span className="text-[#D7E2EA]/40 font-light">•</span>
+                  <span className="italic text-[#D7E2EA]/50 font-light">Accra, Ghana</span>
+                  <span className="text-[#B600A8]/60 font-light">✦</span>
+                </span>
+              ))}
+            </div>
+          </div>
+        </FadeIn>
       </div>
 
       {/* Hero Magnetic Portrait with live photo switch */}
@@ -528,26 +542,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               alt="Ernest Ofoe avatar"
               className="w-full h-auto max-h-[75vh] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.95)] filter contrast-105 pointer-events-none select-none transition-transform duration-300 group-hover:scale-[1.02]"
               loading="eager"
-            />
-
-            {/* Quick Upload action floating bubble */}
-            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-black/80 backdrop-blur-md border border-white/20 px-3 py-1.5 rounded-full text-xs text-white opacity-0 group-hover:opacity-100 transition-all duration-300 whitespace-nowrap shadow-xl">
-              <span>Your Photo?</span>
-              <button
-                type="button"
-                onClick={() => fileInputRef.current?.click()}
-                className="bg-[#B600A8] hover:bg-[#d000c0] text-white px-2.5 py-1 rounded-full text-[11px] font-semibold uppercase tracking-wider flex items-center gap-1 cursor-pointer transition-colors"
-              >
-                <Upload className="w-3 h-3" />
-                Upload
-              </button>
-            </div>
-            <input
-              ref={fileInputRef}
-              type="file"
-              accept="image/*"
-              className="hidden"
-              onChange={handleFileUpload}
             />
           </div>
         </Magnet>
@@ -859,7 +853,7 @@ const ProjectCard: React.FC<{
             </div>
           </div>
 
-          <LiveProjectButton href="#contact" label="View Code / Live" />
+          <LiveProjectButton href={project.liveUrl} label="View Live Site" />
         </div>
 
         {/* 2-Column Image Grid (40% left, 60% right) */}
@@ -1226,12 +1220,10 @@ const ContactModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({
   );
 };
 
+const AVATAR_URL = '/avatar.png';
+
 export default function App() {
   const [contactModalOpen, setContactModalOpen] = useState(false);
-  // Default hero avatar (users can upload their own photo directly through the button on hover)
-  const [avatarUrl, setAvatarUrl] = useState(
-    'https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png'
-  );
 
   return (
     <div className="min-h-screen bg-[#0C0C0C] text-[#D7E2EA] font-['Kanit',sans-serif] overflow-x-clip selection:bg-[#B600A8] selection:text-white">
@@ -1240,8 +1232,7 @@ export default function App() {
 
       {/* 1. Hero Section */}
       <HeroSection
-        avatarUrl={avatarUrl}
-        onAvatarChange={setAvatarUrl}
+        avatarUrl={AVATAR_URL}
         onOpenContact={() => setContactModalOpen(true)}
       />
 
