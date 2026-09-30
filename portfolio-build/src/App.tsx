@@ -1220,7 +1220,7 @@ const ContactModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({
   );
 };
 
-const AVATAR_URL = '/avatar.png';
+const AVATAR_URL = '/avatar.jpg';
 
 export default function App() {
   const [contactModalOpen, setContactModalOpen] = useState(false);
