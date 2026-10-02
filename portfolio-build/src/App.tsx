@@ -125,6 +125,42 @@ const PROJECTS = [
       col2: '/beebies-bottom.png',
     },
   },
+  {
+    number: '04',
+    name: "Ogidibrown Interior Designs",
+    category: 'Client Website',
+    liveUrl: 'https://www.ogidibrowninterior.com/',
+    tags: ['Web Design', 'Gallery System', 'Online Booking', 'SEO'],
+    images: {
+      col1Top: 'ogidibrown.png',
+      col1Bottom: 'ogidibrown1.png',
+      col2: 'ogidibrown2.png',
+    },
+  },
+  {
+    number: '05',
+    name: "Vybe Chatting App",
+    category: 'Personal Project',
+    liveUrl: 'https://vybe-delta-taupe.vercel.app',
+    tags: ['Web Design', 'Chatting System', 'AI Integration', 'Voice Recording', 'SEO'],
+    images: {
+      col1Top: '/vybe.png',
+      col1Bottom: '/vybe1.png' ,
+      col2: '/vybe2.png',
+    },
+  },
+  {
+    number: '06',
+    name: "Mini Muse Perfume Shop",
+    category: 'Personal Website',
+    liveUrl: 'https://www.wellconnectedltd.store',
+    tags: ['Web Design', 'Menu System', 'Online Ordering', 'SEO'],
+    images: {
+      col1Top: '/mini-muse.png',
+      col1Bottom:'/mini-muse-1.png' ,
+      col2:'/mini-muse-2.png' ,
+    },
+  },
 ];
 
 const GlobalStyles: React.FC = () => {
