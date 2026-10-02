@@ -1266,7 +1266,7 @@ const ContactModal: React.FC<{ isOpen: boolean; onClose: () => void }> = ({
   );
 };
 
-const AVATAR_URL = '/avatar.jpg';
+const AVATAR_URL = '/avatar.webp';
 
 export default function App() {
   const [contactModalOpen, setContactModalOpen] = useState(false);
