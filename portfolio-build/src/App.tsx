@@ -121,7 +121,7 @@ const PROJECTS = [
     tags: ['Web Design', 'Menu System', 'Online Ordering', 'SEO'],
     images: {
       col1Top: '/beebies-hero.png',
-      col1Bottom: '/beebies-menu.png',
+      col1Bottom: '/beebies.png',
       col2: '/beebies-bottom.png',
     },
   },
@@ -132,9 +132,9 @@ const PROJECTS = [
     liveUrl: 'https://www.ogidibrowninterior.com/',
     tags: ['Web Design', 'Gallery System', 'Online Booking', 'SEO'],
     images: {
-      col1Top: 'ogidibrown.png',
-      col1Bottom: 'ogidibrown1.png',
-      col2: 'ogidibrown2.png',
+      col1Top: '/ogidibrown.png',
+      col1Bottom: '/ogidibrown1.png',
+      col2: '/ogidibrown2.png',
     },
   },
   {
